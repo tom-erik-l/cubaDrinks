@@ -1,13 +1,54 @@
 import json
 import traceback
 from tkinter import *
+from PIL import Image # pillow module
+from PIL import ImageTk # pillow module
+import math
 
 
 class DrinksApp:
     def __init__(self, parent):
         self.myParent = parent  ### (7) remember my parent, the root
         self.Ingredients()
-        self.Drinks()
+        # drinks = self.Drinks({"tkParent": parent, "labelText": "Possible drinks\nSelect one", "selectFunction": self.PossibleDrinksUpdate()})
+        kwargs = {"tkParent": parent, "labelText": "Possible drinks\nSelect one", "selectFunction": self.listBoxCurDrinkSelect}
+        self.drinks = self.Drinks(**kwargs)
+        kwargs = {"tkParent": parent, "labelText": "Drinks missing 1 ingredient\nSelect one", "selectFunction": self.listBoxCurDrinkSelect}
+        self.drinks1Missing = self.Drinks(**kwargs)
+        self.DisplayDrink()
+
+    class Drinks:
+        def __init__(self,**kwargs):
+            if "tkParent" in kwargs:
+                self.tkParent = kwargs["tkParent"]
+            if "labelText" in kwargs:
+                self.labelText = kwargs["labelText"]
+
+            # drinksContainer = Frame(self.myParent)
+            drinksContainer = Frame(self.tkParent)
+            drinksContainer.pack(side="left")
+
+            # Label for the ingredient list
+            Label(drinksContainer, text=self.labelText).pack(side=TOP)
+
+            # Frame for listbox and scrollbar
+            drinksFrame = Frame(drinksContainer)
+            drinksFrame.pack()
+
+            # Create the listbox
+            self.drinksListBox = Listbox(drinksFrame, selectmode=SINGLE, height=30, exportselection=0)
+            self.drinksListBox.pack(side="right")
+
+            # Create the scrollbar
+            drinksScrollBar = Scrollbar(drinksFrame, orient="vertical")
+            drinksScrollBar.config(command=self.drinksListBox.yview())
+            drinksScrollBar.pack(side="left", fill="y")
+            self.drinksListBox.config(yscrollcommand=drinksScrollBar.set) #Attach scrollbar to listbox
+
+            if "selectFunction" in kwargs:
+            #     # self.drinksListBox.bind('<<ListboxSelect>>',self.listBoxCurDrinkSelect)
+                self.drinksListBox.bind('<<ListboxSelect>>',kwargs["selectFunction"])
+
 
     def Ingredients(self):
         ingredientListContainer = Frame(self.myParent)
@@ -29,7 +70,7 @@ class DrinksApp:
         ingredientListBox = Listbox(ingredientListFrame, selectmode=MULTIPLE, height=30, exportselection=0)
         ingredientListBox.pack(side="right")
         for item in self.ingredientList:
-            print(item)
+            # print(item)
             ingredientListBox.insert(END, item)
 
         # Create the scrollbar
@@ -40,28 +81,45 @@ class DrinksApp:
 
         ingredientListBox.bind('<<ListboxSelect>>',self.ingredientlistBoxCurSelect)
 
-    def Drinks(self):
-        drinksContainer = Frame(self.myParent)
-        drinksContainer.pack(side="left")
+    def DisplayDrink(self):
+        displayContainer = Frame(self.myParent)
+        displayContainer.pack(side="left")
 
         # Label for the ingredient list
-        Label(drinksContainer, text="Possible drinks\nSelect one").pack(side=TOP)
+        Label(displayContainer, text="Your selected drink:").pack(side=TOP)
 
         # Frame for listbox and scrollbar
-        drinksFrame = Frame(drinksContainer)
-        drinksFrame.pack()
+        displayFrame = Frame(displayContainer)
+        displayFrame.pack()
 
-        # Create the listbox
-        self.drinksListBox = Listbox(drinksFrame, selectmode=SINGLE, height=30, exportselection=0)
-        self.drinksListBox.pack(side="right")
+        # Drink name:
+        Label(displayFrame, textvariable="Your selected drink:").pack(side=TOP)
 
-        # Create the scrollbar
-        drinksScrollBar = Scrollbar(drinksFrame, orient="vertical")
-        drinksScrollBar.config(command=self.drinksListBox.yview())
-        drinksScrollBar.pack(side="left", fill="y")
-        self.drinksListBox.config(yscrollcommand=drinksScrollBar.set) #Attach scrollbar to listbox
+        #Drink picture:
+        maxWidth = 500
+        maxHeight = 500
+        try:
+            img = Image.open("images/dummy.png")
+        except Exception:
+            img = Image.open("images/dummy.png")
+        finally: #Show the picture
+            #Maintain the scaling
+            # origScale = img.size[1]/img.size[2] # width / height -> width should be origScale * height
+            widthSizeFactor = img.size[0] / maxWidth
+            width = math.floor(img.size[0]/widthSizeFactor)
+            height = math.floor(img.size[1]/widthSizeFactor)
 
-        self.drinksListBox.bind('<<ListboxSelect>>',self.listBoxCurDrinkSelect)
+            if height > maxHeight:
+                heightSizeFactor = img.size[1] / maxHeight
+                width = math.floor(widthSizeFactor*img.size[0])
+                height = math.floor(widthSizeFactor*img.size[1])
+
+            img = img.resize((width,height), Image.ANTIALIAS)
+            img =  ImageTk.PhotoImage(img)
+
+            drinkImage = Label(displayFrame, image=img)
+            drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
+            drinkImage.pack(side=TOP)
 
     def ingredientlistBoxCurSelect(self,event):
         selectedIngredients = []
@@ -72,10 +130,9 @@ class DrinksApp:
             selectedIngredients.append(widget.get(i))
 
         selectedIngredients = set(selectedIngredients)
-        # print(selectedIngredients)
 
         # call the PossibleDrinks function to update the possibleDrinks listbox
-        print(self.PossibleDrinksUpdate(selectedIngredients))
+        self.PossibleDrinksUpdate(selectedIngredients)
 
     def PossibleDrinksUpdate(self,selectedIngredients):
         possibleDrinks = []
@@ -85,14 +142,26 @@ class DrinksApp:
             ingredientSet = set(v["ingredients"])
             if ingredientSet.issubset(selectedIngredients):
                 possibleDrinks.append(k)
-            else:
-                pass
+
+        self.drinks.drinksListBox.delete(0,END)
+        for item in possibleDrinks:
+            self.drinks.drinksListBox.insert(END, item)
+
+        # return possibleDrinks
+
+    def PossibleDrinksUpdate1Missing(self,selectedIngredients):
+        possibleDrinks1Missing = []
+
+        # Compare all the drinks in self.recipeList
+        for k, v in self.recipeList.items():
+            ingredientSet = set(v["ingredients"])
+            if len(selectedIngredients.issubset(ingredientSet)) == 1:
+                possibleDrinks1Missing.append(k)
+
 
         self.drinksListBox.delete(0,END)
         for item in possibleDrinks:
             self.drinksListBox.insert(END, item)
-
-        return possibleDrinks
 
     def listBoxCurDrinkSelect(self,event):
         pass
@@ -105,6 +174,7 @@ class DrinksApp:
 
         # selectedIngredients = set(selectedIngredients)
         # # print(selectedIngredients)
+
 
 
 
