@@ -79,27 +79,28 @@ class DrinksApp:
                   "selectFunction": self.DrinksCurSelect}
         self.drinks1Missing = self.ScrollableListBox(**kwargs)
 
-    def DisplayDrink(self):
-        displayContainer = Frame(self.myParent)
-        displayContainer.pack(side="left")
+    class DisplayDrink:
+        def __init__(self, tkParent):
+            displayContainer = Frame(tkParent)
+            displayContainer.pack(side="left")
 
-        # Label for the ingredient list
-        Label(displayContainer, text="Your selected drink:").pack(side=TOP)
+            # Drink name:
+            Label(displayContainer, text="Your selected drink:").pack(side=TOP)
 
-        # Frame for listbox and scrollbar
-        displayFrame = Frame(displayContainer)
-        displayFrame.pack()
+            # Frame for listbox and scrollbar
+            displayFrame = Frame(displayContainer)
+            displayFrame.pack()
 
-        # Drink name:
-        Label(displayFrame, textvariable="Your selected drink:").pack(side=TOP)
+        def OpenPicture(imgPath):
+            #Drink picture:
+            maxWidth = 500
+            maxHeight = 500
+            try:
+                img = Image.open(imgPath)
+            except Exception:
+                img = Image.open("images/dummy.png")
 
-        #Drink picture:
-        maxWidth = 500
-        maxHeight = 500
-        try:
-            img = Image.open("images/dummy.png")
-        except Exception:
-            img = Image.open("images/dummy.png")
+
         finally: #Show the picture
             #Maintain the scaling
             # origScale = img.size[1]/img.size[2] # width / height -> width should be origScale * height
@@ -115,9 +116,9 @@ class DrinksApp:
             img = img.resize((width,height), Image.ANTIALIAS)
             img =  ImageTk.PhotoImage(img)
 
-            drinkImage = Label(displayFrame, image=img)
-            drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
-            drinkImage.pack(side=TOP)
+            self.drinkImage = Label(displayFrame, image=img)
+            self.drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
+            self.drinkImage.pack(side=TOP)
 
     def IngredientsCurSelect(self,event):
         selectedIngredients = []
@@ -163,6 +164,8 @@ class DrinksApp:
 
     def DrinksCurSelect(self,event):
         pass
+
+        self.drinkImage.configure()
         # selectedIngredients = []
 
         # widget = event.widget
