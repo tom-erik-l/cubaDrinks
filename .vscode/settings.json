@@ -1,3 +1,4 @@
 {
-    "python.dataScience.textOutputLimit": 0
+    "python.dataScience.textOutputLimit": 0,
+    "python.pythonPath": "C:\\Users\\Tom-Erik\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
 }

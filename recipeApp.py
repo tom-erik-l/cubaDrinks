@@ -9,77 +9,64 @@ import math
 class DrinksApp:
     def __init__(self, parent):
         self.myParent = parent  ### (7) remember my parent, the root
-        self.Ingredients()
-        # drinks = self.Drinks({"tkParent": parent, "labelText": "Possible drinks\nSelect one", "selectFunction": self.PossibleDrinksUpdate()})
-        kwargs = {"tkParent": parent, "labelText": "Possible drinks\nSelect one", "selectFunction": self.listBoxCurDrinkSelect}
-        self.drinks = self.Drinks(**kwargs)
-        kwargs = {"tkParent": parent, "labelText": "Drinks missing 1 ingredient\nSelect one", "selectFunction": self.listBoxCurDrinkSelect}
-        self.drinks1Missing = self.Drinks(**kwargs)
+        self.Ingredients(parent)
+        kwargs = {"tkParent": parent, "labelText": "Possible drinks\nSelect one", "selectmode": SINGLE, "selectFunction": self.listBoxCurDrinkSelect}
+        self.drinks = self.ScrollableListBox(**kwargs)
+        kwargs = {"tkParent": parent, "labelText": "Drinks missing 1 ingredient\nSelect one", "selectmode": SINGLE, "selectFunction": self.listBoxCurDrinkSelect}
+        self.drinks1Missing = self.ScrollableListBox(**kwargs)
+
         self.DisplayDrink()
 
-    class Drinks:
+    class ScrollableListBox:
         def __init__(self,**kwargs):
             if "tkParent" in kwargs:
-                self.tkParent = kwargs["tkParent"]
+                tkParent = kwargs["tkParent"]
             if "labelText" in kwargs:
-                self.labelText = kwargs["labelText"]
+                labelText = kwargs["labelText"]
+            if "selectmode" in kwargs:
+                selectmode = kwargs["selectmode"]
 
             # drinksContainer = Frame(self.myParent)
-            drinksContainer = Frame(self.tkParent)
-            drinksContainer.pack(side="left")
+            container = Frame(tkParent)
+            container.pack(side="left")
 
             # Label for the ingredient list
-            Label(drinksContainer, text=self.labelText).pack(side=TOP)
+            Label(container, text=labelText).pack(side=TOP)
 
             # Frame for listbox and scrollbar
-            drinksFrame = Frame(drinksContainer)
-            drinksFrame.pack()
+            frame = Frame(container)
+            frame.pack()
 
             # Create the listbox
-            self.drinksListBox = Listbox(drinksFrame, selectmode=SINGLE, height=30, exportselection=0)
-            self.drinksListBox.pack(side="right")
+            self.listBox = Listbox(frame, selectmode=selectmode, height=30, exportselection=0)
+            self.listBox.pack(side="right")
 
             # Create the scrollbar
-            drinksScrollBar = Scrollbar(drinksFrame, orient="vertical")
-            drinksScrollBar.config(command=self.drinksListBox.yview())
-            drinksScrollBar.pack(side="left", fill="y")
-            self.drinksListBox.config(yscrollcommand=drinksScrollBar.set) #Attach scrollbar to listbox
+            scrollBar = Scrollbar(frame, orient="vertical")
+            scrollBar.config(command=self.listBox.yview())
+            scrollBar.pack(side="left", fill="y")
+            self.listBox.config(yscrollcommand=scrollBar.set) #Attach scrollbar to listbox
 
             if "selectFunction" in kwargs:
             #     # self.drinksListBox.bind('<<ListboxSelect>>',self.listBoxCurDrinkSelect)
-                self.drinksListBox.bind('<<ListboxSelect>>',kwargs["selectFunction"])
+                self.listBox.bind('<<ListboxSelect>>',kwargs["selectFunction"])
 
-
-    def Ingredients(self):
-        ingredientListContainer = Frame(self.myParent)
-        ingredientListContainer.pack(side="left")
-
-        # Label for the ingredient list
-        Label(ingredientListContainer, text="Possible ingredients\nSelect multiple").pack(side=TOP)
-
-        # Frame for listbox and scrollbar
-        ingredientListFrame = Frame(ingredientListContainer)
-        ingredientListFrame.pack()
+    def Ingredients(self, parent):
+        kwargs = {"tkParent": parent,
+                  "labelText": "Possible drinks\nSelect one",
+                  "selectmode": MULTIPLE,
+                  "selectFunction": self.ingredientlistBoxCurSelect}
+        self.ingredients =self.ScrollableListBox(**kwargs)
 
         # Import the data
         recipeLists = recipes()
         self.ingredientList =  recipeLists.listIngredients()
         self.recipeList = recipeLists.getRecipes()
 
-        # Create the listbox
-        ingredientListBox = Listbox(ingredientListFrame, selectmode=MULTIPLE, height=30, exportselection=0)
-        ingredientListBox.pack(side="right")
+        # Add the items to the list box
         for item in self.ingredientList:
             # print(item)
-            ingredientListBox.insert(END, item)
-
-        # Create the scrollbar
-        ingredientListScrollBar = Scrollbar(ingredientListFrame, orient="vertical")
-        ingredientListScrollBar.config(command=ingredientListBox.yview())
-        ingredientListScrollBar.pack(side="left", fill="y")
-        ingredientListBox.config(yscrollcommand=ingredientListScrollBar.set) #Attach scrollbar to listbox
-
-        ingredientListBox.bind('<<ListboxSelect>>',self.ingredientlistBoxCurSelect)
+            self.ingredients.listBox.insert(END, item)
 
     def DisplayDrink(self):
         displayContainer = Frame(self.myParent)
@@ -143,9 +130,9 @@ class DrinksApp:
             if ingredientSet.issubset(selectedIngredients):
                 possibleDrinks.append(k)
 
-        self.drinks.drinksListBox.delete(0,END)
+        self.drinks.listBox.delete(0,END)
         for item in possibleDrinks:
-            self.drinks.drinksListBox.insert(END, item)
+            self.drinks.listBox.insert(END, item)
 
         # return possibleDrinks
 
@@ -159,9 +146,9 @@ class DrinksApp:
                 possibleDrinks1Missing.append(k)
 
 
-        self.drinksListBox.delete(0,END)
+        self.listBox.delete(0,END)
         for item in possibleDrinks:
-            self.drinksListBox.insert(END, item)
+            self.listBox.insert(END, item)
 
     def listBoxCurDrinkSelect(self,event):
         pass
