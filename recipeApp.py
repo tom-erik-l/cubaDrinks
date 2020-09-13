@@ -40,6 +40,29 @@ class DrinksApp:
 
         ingredientListBox.bind('<<ListboxSelect>>',self.ingredientlistBoxCurSelect)
 
+    def Drinks(self):
+        drinksContainer = Frame(self.myParent)
+        drinksContainer.pack(side="left")
+
+        # Label for the ingredient list
+        Label(drinksContainer, text="Possible drinks\nSelect one").pack(side=TOP)
+
+        # Frame for listbox and scrollbar
+        drinksFrame = Frame(drinksContainer)
+        drinksFrame.pack()
+
+        # Create the listbox
+        self.drinksListBox = Listbox(drinksFrame, selectmode=SINGLE, height=30, exportselection=0)
+        self.drinksListBox.pack(side="right")
+
+        # Create the scrollbar
+        drinksScrollBar = Scrollbar(drinksFrame, orient="vertical")
+        drinksScrollBar.config(command=self.drinksListBox.yview())
+        drinksScrollBar.pack(side="left", fill="y")
+        self.drinksListBox.config(yscrollcommand=drinksScrollBar.set) #Attach scrollbar to listbox
+
+        self.drinksListBox.bind('<<ListboxSelect>>',self.listBoxCurDrinkSelect)
+
     def ingredientlistBoxCurSelect(self,event):
         selectedIngredients = []
 
@@ -70,29 +93,6 @@ class DrinksApp:
             self.drinksListBox.insert(END, item)
 
         return possibleDrinks
-
-    def Drinks(self):
-        drinksContainer = Frame(self.myParent)
-        drinksContainer.pack(side="left")
-
-        # Label for the ingredient list
-        Label(drinksContainer, text="Possible drinks\nSelect one").pack(side=TOP)
-
-        # Frame for listbox and scrollbar
-        drinksFrame = Frame(drinksContainer)
-        drinksFrame.pack()
-
-        # Create the listbox
-        self.drinksListBox = Listbox(drinksFrame, selectmode=SINGLE, height=30, exportselection=0)
-        self.drinksListBox.pack(side="right")
-
-        # Create the scrollbar
-        drinksScrollBar = Scrollbar(drinksFrame, orient="vertical")
-        drinksScrollBar.config(command=self.drinksListBox.yview())
-        drinksScrollBar.pack(side="left", fill="y")
-        self.drinksListBox.config(yscrollcommand=drinksScrollBar.set) #Attach scrollbar to listbox
-
-        self.drinksListBox.bind('<<ListboxSelect>>',self.listBoxCurDrinkSelect)
 
     def listBoxCurDrinkSelect(self,event):
         pass
