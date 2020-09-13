@@ -1,0 +1,1510 @@
+{
+    "10 stk. Lyserøde Elefanter": {
+        "image": "images/10 stk. Lyserøde Elefanter.png",
+        "ingredients": {
+            "CUBA Strawberry": "4 cl. ",
+            "Flødeskum": "4 tsk. ",
+            "Jordbærsirup": "2 cl. ",
+            "Rød sodavand": " "
+        }
+    },
+    "10 stk. Strawberry Smoothie shots": {
+        "image": "images/10 stk. Strawberry Smoothie shots.png",
+        "ingredients": {
+            "CUBA Strawberry": "6 cl. ",
+            "Grenadine": "4 cl. ",
+            "Mælk": "10 cl. "
+        }
+    },
+    "3 farvet is": {
+        "image": "images/3 farvet is.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Cocio Chokolademælk": "10 cl. ",
+            "Dooley's Original Toffee & Vodka": "2 cl. ",
+            "Grenadine": "2 cl. "
+        }
+    },
+    "After 8": {
+        "image": "images/After 8.png",
+        "ingredients": {
+            "CUBA Cool Mint": "2 cl. ",
+            "Cocio Chokolademælk": " "
+        }
+    },
+    "Aloha": {
+        "image": "images/Aloha.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Lime": "1/2 ",
+            "Tranebærjuice": " "
+        }
+    },
+    "Ananas Split": {
+        "image": "images/Ananas Split.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Cola": " ",
+            "Lime": " "
+        }
+    },
+    "Apple Pie": {
+        "image": "images/Apple Pie.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. ",
+            "Æblejuice": "8 cl. "
+        }
+    },
+    "Apricot Spritz": {
+        "image": "images/Apricot Spritz.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "Mousserende Vin": " "
+        }
+    },
+    "Astronaut": {
+        "image": "images/Astronaut.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Hyldeblomst sodavand": " ",
+            "Solbærsirup": " "
+        }
+    },
+    "Bahama Mama": {
+        "image": "images/Bahama Mama.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Benzin": {
+        "image": "images/Benzin.png",
+        "ingredients": {
+            "CUBA Apricot": "4 cl. "
+        }
+    },
+    "Bitch": {
+        "image": "images/Bitch.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "Sprite": " ",
+            "Æblejuice": " "
+        }
+    },
+    "Black Out": {
+        "image": "images/Black Out.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Cola": " "
+        }
+    },
+    "Blue Hawaii": {
+        "image": "images/Blue Hawaii.png",
+        "ingredients": {
+            "Ananasjuice": "3 cl. ",
+            "Blåbær": "12 stk. ",
+            "CUBA Blueberry": "2 cl. ",
+            "Vanilledessertcreme": "6 cl. "
+        }
+    },
+    "Blue Tonic": {
+        "image": "images/Blue Tonic.png",
+        "ingredients": {
+            "CUBA Blueberry": "2 cl. ",
+            "Tonic": " "
+        }
+    },
+    "Blueberry Frozen Mojito": {
+        "image": "images/Blueberry Frozen Mojito.png",
+        "ingredients": {
+            "CUBA Blueberry": "4 cl. ",
+            "Danskvand": " ",
+            "Limebåd": "5 stk. ",
+            "Mynteblade": "4-5 stk. ",
+            "Rørsukker": "1 tsk. "
+        }
+    },
+    "Blueberry Smoothie": {
+        "image": "images/Blueberry Smoothie.png",
+        "ingredients": {
+            "CUBA Blueberry": "2 cl. ",
+            "Fløde": "10 cl. ",
+            "Sødmælk": "10 cl. "
+        }
+    },
+    "Bonita": {
+        "image": "images/Bonita.png",
+        "ingredients": {
+            "Ananasjuice": "4 cl. ",
+            "CUBA Pineapple": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Bounty Bay": {
+        "image": "images/Bounty Bay.png",
+        "ingredients": {
+            "Appelsinjuice": "6 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Flødeskum": "2 tsk. ",
+            "Sprite": "4 cl. "
+        }
+    },
+    "Brazilian": {
+        "image": "images/Brazilian.png",
+        "ingredients": {
+            "Appelsinjuice": " ",
+            "CUBA Pineapple": "2 cl. "
+        }
+    },
+    "CUBA Bite Shot": {
+        "image": "images/CUBA Bite Shot.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Limebåd": "1 stk. ",
+            "Sukker": "1 tsk. "
+        }
+    },
+    "CUBA Colada": {
+        "image": "images/CUBA Colada.png",
+        "ingredients": {
+            "Ananasjuice": "10 cl. ",
+            "CUBA Caramel": "2 cl. "
+        }
+    },
+    "CUBA Dumle": {
+        "image": "images/CUBA Dumle.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Cocio chokolademælk": " "
+        }
+    },
+    "CUBA Fantastic": {
+        "image": "images/CUBA Fantastic.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Caramel": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. "
+        }
+    },
+    "CUBA Hot Shot": {
+        "image": "images/CUBA Hot Shot.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Flødeskum": "1 tsk. ",
+            "Kaffe": "2 cl. "
+        }
+    },
+    "CUBA Latte": {
+        "image": "images/CUBA Latte.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. ",
+            "Flødeskum": "2 tsk. ",
+            "Kaffe": "8 cl. "
+        }
+    },
+    "CUBA Milky Way Raspberry & Liqourice": {
+        "image": "images/CUBA Milky Way Raspberry & Liqourice.png",
+        "ingredients": {
+            "CUBA Raspberry": "2 cl. ",
+            "Dooley's White Chocolate": "2 cl. ",
+            "Sismofytter Lakrids Shot": "1 cl. ",
+            "Sødmælk": "5 cl. "
+        }
+    },
+    "CUBA Orange Azul": {
+        "image": "images/CUBA Orange Azul.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Orange": "2 cl. ",
+            "Friskpresset limesaft": "2 cl. "
+        }
+    },
+    "CUBA Rock": {
+        "image": "images/CUBA Rock.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. "
+        }
+    },
+    "Calippo": {
+        "image": "images/Calippo.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "CUBA Pineapple": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Calippo Fruit": {
+        "image": "images/Calippo Fruit.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Passion": "2 cl. ",
+            "Grenadine": "1 cl. ",
+            "Passionsfrugt": "1/2 stk. "
+        }
+    },
+    "Caramelatté": {
+        "image": "images/Caramelatté.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Flødeskum": "3 tsk. ",
+            "Kaffe": " ",
+            "Sødmælk": "4 cl. "
+        }
+    },
+    "Caribbean Breeze": {
+        "image": "images/Caribbean Breeze.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. ",
+            "Friskpresset limesaft": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Caught In The Act": {
+        "image": "images/Caught In The Act.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "ChampusBrus": {
+        "image": "images/ChampusBrus.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Friskpresset limesaft": "1 cl. ",
+            "Grøn Sodavand": " "
+        }
+    },
+    "Clear Passion": {
+        "image": "images/Clear Passion.png",
+        "ingredients": {
+            "CUBA Passion": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Completely For Girls": {
+        "image": "images/Completely For Girls.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Rød sodavand": " "
+        }
+    },
+    "Cool Rain": {
+        "image": "images/Cool Rain.png",
+        "ingredients": {
+            "CUBA Cool Mint": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Creamy Passion Solero": {
+        "image": "images/Creamy Passion Solero.png",
+        "ingredients": {
+            "Appelsinjuice": " ",
+            "CUBA Passion": "2 cl. ",
+            "Fløde": "2 cl. "
+        }
+    },
+    "Crispy Caramel": {
+        "image": "images/Crispy Caramel.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Sprite": "4 cl. ",
+            "Æblejuice": "4 cl. "
+        }
+    },
+    "Cubanasplit": {
+        "image": "images/Cubanasplit.png",
+        "ingredients": {
+            "Bananlikør": "1 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Mælk": "6 cl. "
+        }
+    },
+    "Cubatini": {
+        "image": "images/Cubatini.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. ",
+            "CUBA Pure Vodka": "2 cl. "
+        }
+    },
+    "Deep Blue Sea": {
+        "image": "images/Deep Blue Sea.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Blueberry": "2 cl. ",
+            "CUBA Orange": "2 cl. "
+        }
+    },
+    "Dry Tom Collins": {
+        "image": "images/Dry Tom Collins.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Friskpresset citronsaft": " ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Eagle": {
+        "image": "images/Eagle.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Strawberry": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. "
+        }
+    },
+    "Energizer": {
+        "image": "images/Energizer.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Energidrik": " "
+        }
+    },
+    "Epo": {
+        "image": "images/Epo.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Whiskey": "2 cl. "
+        }
+    },
+    "Exotic Colada": {
+        "image": "images/Exotic Colada.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Mango": "2 cl. ",
+            "CUBA Pineapple": "2 cl. ",
+            "Fløde": "2 cl. "
+        }
+    },
+    "Filur": {
+        "image": "images/Filur.png",
+        "ingredients": {
+            "Appelsinjuice": "8 cl. ",
+            "CUBA Apricot": "2 cl. ",
+            "Rød sodavand": "4 cl. "
+        }
+    },
+    "Fluffy": {
+        "image": "images/Fluffy.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Hyldeblomst sorbet": "2 scoop ",
+            "Tonic": " "
+        }
+    },
+    "Fluffy Fruit Salad": {
+        "image": "images/Fluffy Fruit Salad.png",
+        "ingredients": {
+            "Ananasjuice": "6 cl. ",
+            "CUBA Apricot": "2 cl. ",
+            "Fløde": "1 cl. ",
+            "Rød sodavand": " "
+        }
+    },
+    "Freak Out": {
+        "image": "images/Freak Out.png",
+        "ingredients": {
+            "CUBA Apricot": " ",
+            "CUBA Caramel": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Fresh Bite": {
+        "image": "images/Fresh Bite.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Sprite": "4 cl. ",
+            "Æblejuice": "4 cl. "
+        }
+    },
+    "Frosty Pineapple": {
+        "image": "images/Frosty Pineapple.png",
+        "ingredients": {
+            "Ananasjuice": "3 cl. ",
+            "CUBA Cool Mint": "1 cl. ",
+            "CUBA Pineapple": "3 cl. ",
+            "Danskvand": " "
+        }
+    },
+    "Ginger Splice": {
+        "image": "images/Ginger Splice.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Ginger ale": " "
+        }
+    },
+    "Golden Summer": {
+        "image": "images/Golden Summer.png",
+        "ingredients": {
+            "Appelsinjuice": " ",
+            "CUBA Apricot": "2 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Fløde": " ",
+            "Puré af jordbær": "3 tsk. "
+        }
+    },
+    "Green Lagoon": {
+        "image": "images/Green Lagoon.png",
+        "ingredients": {
+            "CUBA Watermelon": "2 cl. ",
+            "Grøn Sodavand": " "
+        }
+    },
+    "Haiti": {
+        "image": "images/Haiti.png",
+        "ingredients": {
+            "Ananasjuice": "10 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Flødeskum": "2 tsk. ",
+            "Jordbær": "1-2 stk. "
+        }
+    },
+    "Hanky Panky": {
+        "image": "images/Hanky Panky.png",
+        "ingredients": {
+            "Ananasjuice": "2 cl. ",
+            "CUBA Blueberry": "2 cl. "
+        }
+    },
+    "Hawaii Lover": {
+        "image": "images/Hawaii Lover.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Cola": " "
+        }
+    },
+    "Heaven": {
+        "image": "images/Heaven.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Friskpresset citronsaft": " ",
+            "Tonic": "8 cl. "
+        }
+    },
+    "Hindbær Læske": {
+        "image": "images/Hindbær Læske.png",
+        "ingredients": {
+            "CUBA Raspberry": "2 cl. ",
+            "Friskpresset limesaft": "1 cl. ",
+            "Grøn sodavand": " "
+        }
+    },
+    "Hippie": {
+        "image": "images/Hippie.png",
+        "ingredients": {
+            "CUBA Blueberry": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Honolulu": {
+        "image": "images/Honolulu.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "CUBA Watermelon": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Hubbabubba": {
+        "image": "images/Hubbabubba.png",
+        "ingredients": {
+            "CUBA Blueberry": "2 cl. ",
+            "Grenadine": "1 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Ice Shot": {
+        "image": "images/Ice Shot.png",
+        "ingredients": {
+            "CUBA Cool Mint": "2 cl. "
+        }
+    },
+    "Isbjørn": {
+        "image": "images/Isbjørn.png",
+        "ingredients": {
+            "CUBA Orange": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Jelly Baby": {
+        "image": "images/Jelly Baby.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Jordbær Høst": {
+        "image": "images/Jordbær Høst.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Fløde": "1 dl. ",
+            "Grenadine": "2 cl. ",
+            "Kokoslikør": "4 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Juicy Pineapple": {
+        "image": "images/Juicy Pineapple.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Danskvand": " ",
+            "Friskpresset limesaft": "1 cl. "
+        }
+    },
+    "Just Peachy": {
+        "image": "images/Just Peachy.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. ",
+            "Ice Tea Peach": "12 cl. ",
+            "Sprite": "4 cl. "
+        }
+    },
+    "Kafforange": {
+        "image": "images/Kafforange.png",
+        "ingredients": {
+            "CUBA Orange": "2 cl. ",
+            "Kaffe": " ",
+            "Mørk Chokolade": "1 stk. "
+        }
+    },
+    "Kick Off": {
+        "image": "images/Kick Off.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Kongen af Danmark": {
+        "image": "images/Kongen af Danmark.png",
+        "ingredients": {
+            "CUBA Cool Mint": "2 cl. ",
+            "Rød sodavand": " "
+        }
+    },
+    "Kæmpe Eskimo": {
+        "image": "images/Kæmpe Eskimo.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Solbærsirup": " ",
+            "Vaniljeis": " "
+        }
+    },
+    "Kæmpe Læske": {
+        "image": "images/Kæmpe Læske.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Friskpresset limesaft": " ",
+            "Sprite": " "
+        }
+    },
+    "Københavnerstang": {
+        "image": "images/Københavnerstang.png",
+        "ingredients": {
+            "Appelsinjuice": " ",
+            "CUBA Pineapple": "2 cl. ",
+            "Flødeskum": " "
+        }
+    },
+    "La Luna": {
+        "image": "images/La Luna.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "CUBA Orange": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Laber Larve": {
+        "image": "images/Laber Larve.png",
+        "ingredients": {
+            "Abrikossirup": "1 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Cola": " "
+        }
+    },
+    "Lemon Drop": {
+        "image": "images/Lemon Drop.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. ",
+            "Hyldeblomstsaft": "8 cl. "
+        }
+    },
+    "Lemon Style": {
+        "image": "images/Lemon Style.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Love Spray": {
+        "image": "images/Love Spray.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "2 cl. ",
+            "Friskpresset limesaft": "1 stk. ",
+            "Rød sodavand": " "
+        }
+    },
+    "Malaga": {
+        "image": "images/Malaga.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Friskpresset limesaft": "2 cl. ",
+            "Pink grape sodavand": "8 cl. "
+        }
+    },
+    "Mama Mia": {
+        "image": "images/Mama Mia.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Mambo": {
+        "image": "images/Mambo.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. ",
+            "Grenadine": "1 cl. ",
+            "Tonic": "6 cl. "
+        }
+    },
+    "Mango Colada": {
+        "image": "images/Mango Colada.png",
+        "ingredients": {
+            "Ananasjuice": "8 cl. ",
+            "CUBA Mango": "2 cl. ",
+            "Fløde": "2 cl. "
+        }
+    },
+    "Mango Hazz": {
+        "image": "images/Mango Hazz.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Friskpresset limesaft": " ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Mango Mania": {
+        "image": "images/Mango Mania.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Friskpresset limesaft": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Mango Sunrise": {
+        "image": "images/Mango Sunrise.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Mango": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. ",
+            "Solbærsirup": "1 cl. "
+        }
+    },
+    "Mango grape": {
+        "image": "images/Mango grape.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Grape sodavand": " "
+        }
+    },
+    "Matador": {
+        "image": "images/Matador.png",
+        "ingredients": {
+            "Appelsinvand": "6 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Cola": " "
+        }
+    },
+    "Melon Must": {
+        "image": "images/Melon Must.png",
+        "ingredients": {
+            "CUBA Watermelon": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Melon Water": {
+        "image": "images/Melon Water.png",
+        "ingredients": {
+            "CUBA Watermelon": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Melon dream": {
+        "image": "images/Melon dream.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Watermelon": "2 cl. ",
+            "Flødeskum": " "
+        }
+    },
+    "Midnight Melon": {
+        "image": "images/Midnight Melon.png",
+        "ingredients": {
+            "CUBA Watermelon": "2 cl. ",
+            "Tranebærjuice": " "
+        }
+    },
+    "Mint Must": {
+        "image": "images/Mint Must.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Cool Mint": "2 cl. "
+        }
+    },
+    "Miss Passion": {
+        "image": "images/Miss Passion.png",
+        "ingredients": {
+            "CUBA Passion": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Moonlight": {
+        "image": "images/Moonlight.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Solbærsirup": "1 cl. ",
+            "Tonic": "8 cl. "
+        }
+    },
+    "Moscow": {
+        "image": "images/Moscow.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Ginger beer": "8 cl. "
+        }
+    },
+    "Moscow Mule": {
+        "image": "images/Moscow Mule.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "4 cl. ",
+            "Friskpresset limesaft": "2 cl. ",
+            "Ginger beer": "10 cl. "
+        }
+    },
+    "Must Have": {
+        "image": "images/Must Have.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Ginger beer": "8 cl. ",
+            "Solbærsirup": "1 cl. "
+        }
+    },
+    "Natural": {
+        "image": "images/Natural.png",
+        "ingredients": {
+            "CUBA Blueberry": "2 cl. ",
+            "Danskvand": " "
+        }
+    },
+    "Naughty Bottom": {
+        "image": "images/Naughty Bottom.png",
+        "ingredients": {
+            "CUBA Passion": "2 cl. ",
+            "Ginger ale": "8 cl. ",
+            "Jordbær": "3 stk. ",
+            "Jordbærsirup": "1 cl. ",
+            "Limebåd": "3 stk. "
+        }
+    },
+    "New York": {
+        "image": "images/New York.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Friskpresset citronsaft": " ",
+            "Tonic": "8 cl. "
+        }
+    },
+    "Nice Coma": {
+        "image": "images/Nice Coma.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Cola": " "
+        }
+    },
+    "Number 1": {
+        "image": "images/Number 1.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "CUBA Passion": "2 cl. ",
+            "Grenadine": "1 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Oh Ginger": {
+        "image": "images/Oh Ginger.png",
+        "ingredients": {
+            "CUBA Orange": "2 cl. ",
+            "Ginger ale": " "
+        }
+    },
+    "Orange Fresh": {
+        "image": "images/Orange Fresh.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Cool Mint": "2 cl. "
+        }
+    },
+    "Orange Knas": {
+        "image": "images/Orange Knas.png",
+        "ingredients": {
+            "CUBA Orange": "2 cl. ",
+            "Cocio Chokolademælk": " "
+        }
+    },
+    "Orange Strawberry Sky": {
+        "image": "images/Orange Strawberry Sky.png",
+        "ingredients": {
+            "Appelsinjuice": " ",
+            "CUBA Orange": "2 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Grenadine": "2 cl. "
+        }
+    },
+    "Pacific Dream": {
+        "image": "images/Pacific Dream.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Apricot": "2 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Passion Float": {
+        "image": "images/Passion Float.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Passion": "4 cl. "
+        }
+    },
+    "Passion Float Shots": {
+        "image": "images/Passion Float Shots.png",
+        "ingredients": {
+            "Ananasjuice": "6 cl. ",
+            "CUBA Passion": "10 cl. ",
+            "Fløde": "14 cl. "
+        }
+    },
+    "Passion Mojito": {
+        "image": "images/Passion Mojito.png",
+        "ingredients": {
+            "CUBA Passion": "2 cl. ",
+            "Danskvand": "8 cl. ",
+            "Limebåd": "3 stk. ",
+            "Mynteblade": "4 stk. ",
+            "Rørsukker": "2 tsk. "
+        }
+    },
+    "Passion Orange": {
+        "image": "images/Passion Orange.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Passion": "2 cl. ",
+            "Limebåd": "2 stk. ",
+            "Passionsfrugt": "1/2 stk. "
+        }
+    },
+    "Passion Sunrise": {
+        "image": "images/Passion Sunrise.png",
+        "ingredients": {
+            "Appelsinjuice": "6 cl. ",
+            "CUBA Passion": "2 cl. ",
+            "Rød sodavand": "6 cl. "
+        }
+    },
+    "Passion Twist": {
+        "image": "images/Passion Twist.png",
+        "ingredients": {
+            "CUBA Passion": "2 cl. ",
+            "Æblemost": " "
+        }
+    },
+    "Perfect": {
+        "image": "images/Perfect.png",
+        "ingredients": {
+            "CUBA Raspberry": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Pineapple Refresher": {
+        "image": "images/Pineapple Refresher.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "CUBA Orange": "2 cl. ",
+            "Puré af ananas": "1-2 tsk. ",
+            "Sour mix": "1 tsk. "
+        }
+    },
+    "Piniapoppers": {
+        "image": "images/Piniapoppers.png",
+        "ingredients": {
+            "CUBA Mango": "1 cl. ",
+            "CUBA Pineapple": "2 cl. ",
+            "Danskvand": " ",
+            "Friskpresset limesaft": "1 cl. "
+        }
+    },
+    "Pink Dry": {
+        "image": "images/Pink Dry.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Friskpresset limesaft": " ",
+            "Granatæblesirup": "1 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Pink Poetry": {
+        "image": "images/Pink Poetry.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Friskpresset citronsaft": " ",
+            "Pink grapefrugt tonic": " "
+        }
+    },
+    "Pink Pussy": {
+        "image": "images/Pink Pussy.png",
+        "ingredients": {
+            "CUBA Raspberry": "2 cl. ",
+            "Flødeskum": "2 spsk. ",
+            "Grenadine": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Pink Razzia": {
+        "image": "images/Pink Razzia.png",
+        "ingredients": {
+            "CUBA Raspberry": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Pinky Coco Loco": {
+        "image": "images/Pinky Coco Loco.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Grenadine": "1 cl. ",
+            "Mælk": "6 cl. "
+        }
+    },
+    "Piña Colada": {
+        "image": "images/Piña Colada.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Pineapple": "4 cl. ",
+            "Fløde": "2 cl. "
+        }
+    },
+    "Piñango": {
+        "image": "images/Piñango.png",
+        "ingredients": {
+            "Ananasjuice": "4 cl. ",
+            "CUBA Mango": "2 cl. ",
+            "Lemon sodavand": "8 cl. "
+        }
+    },
+    "Polarbjørn": {
+        "image": "images/Polarbjørn.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Orange": "4 cl. "
+        }
+    },
+    "Power Passion": {
+        "image": "images/Power Passion.png",
+        "ingredients": {
+            "CUBA Passion": "2 cl. ",
+            "Energidrik": " "
+        }
+    },
+    "Prescious": {
+        "image": "images/Prescious.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Princess": {
+        "image": "images/Princess.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Sprite": "4 cl. ",
+            "Tranebærjuice": "8 cl. "
+        }
+    },
+    "Pulp": {
+        "image": "images/Pulp.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Mango": "2 cl. ",
+            "Pink grape juice": "8 cl. "
+        }
+    },
+    "Pure Citrus": {
+        "image": "images/Pure Citrus.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Pure Cosmopolitan": {
+        "image": "images/Pure Cosmopolitan.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "2 cl. ",
+            "Friskpresset limesaft": "1/2 stk. ",
+            "Tranebærjuice": " "
+        }
+    },
+    "Pure Energy": {
+        "image": "images/Pure Energy.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "2 cl. ",
+            "Energidrik": " "
+        }
+    },
+    "Pure’n’Coke": {
+        "image": "images/Pure’n’Coke.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "2 cl. ",
+            "Cola": " ",
+            "Friskpresset citronsaft": "2 cl. "
+        }
+    },
+    "Purple Rain": {
+        "image": "images/Purple Rain.png",
+        "ingredients": {
+            "Blåbær": "2-3 stk. ",
+            "CUBA Blueberry": "2 cl. ",
+            "Citron": "1 skive ",
+            "Lemon sodavand": "6 cl. ",
+            "Rød sodavand": "4 cl. "
+        }
+    },
+    "Purple Sky": {
+        "image": "images/Purple Sky.png",
+        "ingredients": {
+            "Blåbær": "4-5 stk. ",
+            "CUBA Blueberry": "2 cl. ",
+            "Citron": "1-2 skiver ",
+            "Cola": " "
+        }
+    },
+    "Rainforest": {
+        "image": "images/Rainforest.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Watermelon": "3 cl. "
+        }
+    },
+    "Raspberry Spritzer": {
+        "image": "images/Raspberry Spritzer.png",
+        "ingredients": {
+            "CUBA Raspberry": "2 cl. ",
+            "Mousserende vin": " "
+        }
+    },
+    "Red love": {
+        "image": "images/Red love.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Rød sodavand": " "
+        }
+    },
+    "Rhubarb Sour": {
+        "image": "images/Rhubarb Sour.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Danskvand": " ",
+            "Rabarbersaft": " "
+        }
+    },
+    "Samba": {
+        "image": "images/Samba.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "Grøn Sodavand": " "
+        }
+    },
+    "Sex In The Field": {
+        "image": "images/Sex In The Field.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Æblejuice": " "
+        }
+    },
+    "Side Kick": {
+        "image": "images/Side Kick.png",
+        "ingredients": {
+            "CUBA Orange": "2 cl. ",
+            "Cola": " "
+        }
+    },
+    "Simple": {
+        "image": "images/Simple.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Raspberry": "2 cl. "
+        }
+    },
+    "Skinny Dipping": {
+        "image": "images/Skinny Dipping.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "CUBA Orange": "2 cl. "
+        }
+    },
+    "Skumbanan": {
+        "image": "images/Skumbanan.png",
+        "ingredients": {
+            "Bananlikør": "2 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Cocio Chokolademælk": "2 cl. "
+        }
+    },
+    "Sky High": {
+        "image": "images/Sky High.png",
+        "ingredients": {
+            "Appelsin": "1-2 skiver ",
+            "Appelsinvand": " ",
+            "CUBA Dry Lemon": "2 cl. "
+        }
+    },
+    "Solero": {
+        "image": "images/Solero.png",
+        "ingredients": {
+            "Appelsinjuice": "6 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Flødeskum": "2 tsk. ",
+            "Sprite": "4 cl. "
+        }
+    },
+    "Solero Exotic": {
+        "image": "images/Solero Exotic.png",
+        "ingredients": {
+            "CUBA Mango": "2 cl. ",
+            "Flødeskum": " ",
+            "Friskpresset limesaft": " ",
+            "Sprite": " "
+        }
+    },
+    "Solstang": {
+        "image": "images/Solstang.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Friskpresset limesaft": " ",
+            "Grenadine": " ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Sommerstang": {
+        "image": "images/Sommerstang.png",
+        "ingredients": {
+            "CUBA Caramel": "2 cl. ",
+            "Cola": " ",
+            "Friskpresset citronsaft": "2 cl. "
+        }
+    },
+    "Speed Up": {
+        "image": "images/Speed Up.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Red Bull": " "
+        }
+    },
+    "Spicy Hurricane": {
+        "image": "images/Spicy Hurricane.png",
+        "ingredients": {
+            "Ananasjuice": "3 cl. ",
+            "CUBA Passion": "2 cl. ",
+            "Rom": "2 cl. "
+        }
+    },
+    "Spray": {
+        "image": "images/Spray.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "Friskpresset citronsaft": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Spring-buk": {
+        "image": "images/Spring-buk.png",
+        "ingredients": {
+            "CUBA Cool Mint": "1 cl. ",
+            "Dooley's Original Toffee & Vodka": "1 cl. "
+        }
+    },
+    "Strawberry Daquiri": {
+        "image": "images/Strawberry Daquiri.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Golden Pirate Rum": "2 cl. ",
+            "Puré af jordbær": "3 tsk. ",
+            "Sour mix": "1-2 cl. "
+        }
+    },
+    "Strawberry Dreams": {
+        "image": "images/Strawberry Dreams.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Grenadine": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Strawberry Kiss": {
+        "image": "images/Strawberry Kiss.png",
+        "ingredients": {
+            "Ananasjuice": "3 cl. ",
+            "CUBA Strawberry": "3 cl. ",
+            "Hyldeblomstsaft": "10 cl. "
+        }
+    },
+    "Strawberry Mojito": {
+        "image": "images/Strawberry Mojito.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Danskvand": " ",
+            "Limebåd": "5 stk. ",
+            "Mynteblade": "3-4 stk. ",
+            "Rørsukker": "1 tsk. "
+        }
+    },
+    "Strawberry Paradise": {
+        "image": "images/Strawberry Paradise.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Flødeskum": "2 tsk. ",
+            "Grenadine": "1 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Summer Love": {
+        "image": "images/Summer Love.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Summer Sunrise": {
+        "image": "images/Summer Sunrise.png",
+        "ingredients": {
+            "CUBA Apricot": "2 cl. ",
+            "Rød sodavand": " "
+        }
+    },
+    "Sun Down": {
+        "image": "images/Sun Down.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "Appelsinjuice": " ",
+            "CUBA Apricot": "2 cl. "
+        }
+    },
+    "Sun Kiss": {
+        "image": "images/Sun Kiss.png",
+        "ingredients": {
+            "Appelsin": "1-2 skiver ",
+            "Appelsinvand": " ",
+            "CUBA Raspberry": "2 cl. ",
+            "Hindbær": "2-3 stk. "
+        }
+    },
+    "Sweet Apple": {
+        "image": "images/Sweet Apple.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "2 cl. ",
+            "Sprite": "4 cl. ",
+            "Æblejuice": "4 cl. "
+        }
+    },
+    "Sweet Lime and Sour": {
+        "image": "images/Sweet Lime and Sour.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Friskpresset citronsaft": " ",
+            "Sour mix": "2 cl. "
+        }
+    },
+    "Sweet Tea": {
+        "image": "images/Sweet Tea.png",
+        "ingredients": {
+            "CUBA Apricot": "4 cl. ",
+            "Ice tea peach": " "
+        }
+    },
+    "Tango Orango": {
+        "image": "images/Tango Orango.png",
+        "ingredients": {
+            "Appelsinjuice": "6 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Flødeskum": "1-2 tsk. ",
+            "Sprite": " "
+        }
+    },
+    "The Green House": {
+        "image": "images/The Green House.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Ufiltreret æblemost": "10 cl. "
+        }
+    },
+    "The Twin Sister": {
+        "image": "images/The Twin Sister.png",
+        "ingredients": {
+            "CUBA Dry Lemon": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Tiger": {
+        "image": "images/Tiger.png",
+        "ingredients": {
+            "Appelsinjuice": "6 cl. ",
+            "CUBA Caramel": "2 cl. ",
+            "Sprite": "4 cl. "
+        }
+    },
+    "Too Easy": {
+        "image": "images/Too Easy.png",
+        "ingredients": {
+            "CUBA Cool Mint": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Tropic": {
+        "image": "images/Tropic.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Watermelon": "2 cl. ",
+            "Friskpresset limesaft": "1 cl. "
+        }
+    },
+    "Tropic Passion": {
+        "image": "images/Tropic Passion.png",
+        "ingredients": {
+            "Abrikos Sodavand": " ",
+            "CUBA Passion": "2 cl. "
+        }
+    },
+    "Twisted": {
+        "image": "images/Twisted.png",
+        "ingredients": {
+            "CUBA Blueberry": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Twisted Sister": {
+        "image": "images/Twisted Sister.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Strawberry": "2 cl. "
+        }
+    },
+    "Twister": {
+        "image": "images/Twister.png",
+        "ingredients": {
+            "CUBA Pineapple": "2 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Uh la la la la….": {
+        "image": "images/Uh la la la la…..png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Friskpresset limesaft": "1 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Ultimate Strawberry Dreams": {
+        "image": "images/Ultimate Strawberry Dreams.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Grenadine": "1 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Vanilla Heaven": {
+        "image": "images/Vanilla Heaven.png",
+        "ingredients": {
+            "Ananasjuice": "2 cl. ",
+            "CUBA Strawberry": "2 cl. ",
+            "Jordbær": "4-5 stk. ",
+            "Jordbærsirup": "2 cl. ",
+            "Vanilledessertcreme": "6 cl. "
+        }
+    },
+    "Vingummi": {
+        "image": "images/Vingummi.png",
+        "ingredients": {
+            "CUBA Apricot": " ",
+            "Citronvand": " "
+        }
+    },
+    "Viper": {
+        "image": "images/Viper.png",
+        "ingredients": {
+            "CUBA Orange": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Viva la Vida": {
+        "image": "images/Viva la Vida.png",
+        "ingredients": {
+            "CUBA Strawberry": "2 cl. ",
+            "Kokoslikør": "2 cl. ",
+            "Sprite": " "
+        }
+    },
+    "Vodka Bramble": {
+        "image": "images/Vodka Bramble.png",
+        "ingredients": {
+            "Brombærsirup": " ",
+            "CUBA Dry Lemon": "2 cl. ",
+            "Danskvand": " "
+        }
+    },
+    "Winner": {
+        "image": "images/Winner.png",
+        "ingredients": {
+            "CUBA Caramel": "6 cl. ",
+            "Tranebærjuice": "12 cl. "
+        }
+    },
+    "Wofler": {
+        "image": "images/Wofler.png",
+        "ingredients": {
+            "Ananasjuice": " ",
+            "CUBA Caramel": "2 cl. ",
+            "CUBA Pineapple": "2 cl. ",
+            "Fløde": "2 cl. "
+        }
+    },
+    "Yellow daydream": {
+        "image": "images/Yellow daydream.png",
+        "ingredients": {
+            "Appelsinvand": " ",
+            "CUBA Mango": "2 cl. ",
+            "Friskpresset limesaft": " "
+        }
+    },
+    "Zumba": {
+        "image": "images/Zumba.png",
+        "ingredients": {
+            "CUBA Orange": "2 cl. ",
+            "CUBA Pineapple": "2 cl. ",
+            "Lemon sodavand": " "
+        }
+    },
+    "Ævle Bævle": {
+        "image": "images/Ævle Bævle.png",
+        "ingredients": {
+            "CUBA Pure Vodka": "2 cl. ",
+            "Æblejuice": " "
+        }
+    },
+    "“The Milky Way”": {
+        "image": "images/“The Milky Way”.png",
+        "ingredients": {
+            "CUBA Caramel": "4 cl. ",
+            "Mælk": "12 cl. "
+        }
+    }
+}
