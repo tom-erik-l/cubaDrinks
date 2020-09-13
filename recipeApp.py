@@ -11,10 +11,7 @@ class DrinksApp:
         self.myParent = parent  ### (7) remember my parent, the root
         self.Ingredients(parent)
         self.Drinks(parent)
-
-        kwargs = {"tkParent": parent, "labelText": "Drinks missing 1 ingredient\nSelect one", "selectmode": SINGLE, "selectFunction": self.DrinksCurSelect}
-        self.drinks1Missing = self.ScrollableListBox(**kwargs)
-
+        self.Drinks1Missing(parent)
         self.DisplayDrink()
 
     class ScrollableListBox:
@@ -75,6 +72,13 @@ class DrinksApp:
                   "selectFunction": self.DrinksCurSelect}
         self.drinks = self.ScrollableListBox(**kwargs)
 
+    def Drinks1Missing(self, parent):
+        kwargs = {"tkParent": parent,
+                  "labelText": "Drinks missing 1 ingredient\nSelect one",
+                  "selectmode": SINGLE,
+                  "selectFunction": self.DrinksCurSelect}
+        self.drinks1Missing = self.ScrollableListBox(**kwargs)
+
     def DisplayDrink(self):
         displayContainer = Frame(self.myParent)
         displayContainer.pack(side="left")
@@ -127,6 +131,7 @@ class DrinksApp:
 
         # call the PossibleDrinks function to update the possibleDrinks listbox
         self.PossibleDrinksUpdate(selectedIngredients)
+        self.PossibleDrinks1MissingUpdate(selectedIngredients)
 
     def PossibleDrinksUpdate(self,selectedIngredients):
         possibleDrinks = []
@@ -141,19 +146,20 @@ class DrinksApp:
         for item in possibleDrinks:
             self.drinks.listBox.insert(END, item)
 
-    def PossibleDrinksUpdate1Missing(self,selectedIngredients):
+    def PossibleDrinks1MissingUpdate(self,selectedIngredients):
         possibleDrinks1Missing = []
 
         # Compare all the drinks in self.recipeList
         for k, v in self.recipeList.items():
             ingredientSet = set(v["ingredients"])
-            if len(selectedIngredients.issubset(ingredientSet)) == 1:
+            # print(ingredientSet)
+            # print(selectedIngredients)
+            if len(ingredientSet.difference(selectedIngredients)) == 1:
                 possibleDrinks1Missing.append(k)
 
-
-        self.listBox.delete(0,END)
-        for item in possibleDrinks:
-            self.listBox.insert(END, item)
+        self.drinks1Missing.listBox.delete(0,END)
+        for item in possibleDrinks1Missing:
+            self.drinks1Missing.listBox.insert(END, item)
 
     def DrinksCurSelect(self,event):
         pass
