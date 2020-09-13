@@ -10,9 +10,9 @@ class DrinksApp:
     def __init__(self, parent):
         self.myParent = parent  ### (7) remember my parent, the root
         self.Ingredients(parent)
-        kwargs = {"tkParent": parent, "labelText": "Possible drinks\nSelect one", "selectmode": SINGLE, "selectFunction": self.listBoxCurDrinkSelect}
-        self.drinks = self.ScrollableListBox(**kwargs)
-        kwargs = {"tkParent": parent, "labelText": "Drinks missing 1 ingredient\nSelect one", "selectmode": SINGLE, "selectFunction": self.listBoxCurDrinkSelect}
+        self.Drinks(parent)
+
+        kwargs = {"tkParent": parent, "labelText": "Drinks missing 1 ingredient\nSelect one", "selectmode": SINGLE, "selectFunction": self.DrinksCurSelect}
         self.drinks1Missing = self.ScrollableListBox(**kwargs)
 
         self.DisplayDrink()
@@ -55,7 +55,7 @@ class DrinksApp:
         kwargs = {"tkParent": parent,
                   "labelText": "Possible drinks\nSelect one",
                   "selectmode": MULTIPLE,
-                  "selectFunction": self.ingredientlistBoxCurSelect}
+                  "selectFunction": self.IngredientsCurSelect}
         self.ingredients =self.ScrollableListBox(**kwargs)
 
         # Import the data
@@ -67,6 +67,13 @@ class DrinksApp:
         for item in self.ingredientList:
             # print(item)
             self.ingredients.listBox.insert(END, item)
+
+    def Drinks(self, parent):
+        kwargs = {"tkParent": parent,
+                  "labelText": "Possible drinks\nSelect one",
+                  "selectmode": SINGLE,
+                  "selectFunction": self.DrinksCurSelect}
+        self.drinks = self.ScrollableListBox(**kwargs)
 
     def DisplayDrink(self):
         displayContainer = Frame(self.myParent)
@@ -108,7 +115,7 @@ class DrinksApp:
             drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
             drinkImage.pack(side=TOP)
 
-    def ingredientlistBoxCurSelect(self,event):
+    def IngredientsCurSelect(self,event):
         selectedIngredients = []
 
         widget = event.widget
@@ -134,8 +141,6 @@ class DrinksApp:
         for item in possibleDrinks:
             self.drinks.listBox.insert(END, item)
 
-        # return possibleDrinks
-
     def PossibleDrinksUpdate1Missing(self,selectedIngredients):
         possibleDrinks1Missing = []
 
@@ -150,7 +155,7 @@ class DrinksApp:
         for item in possibleDrinks:
             self.listBox.insert(END, item)
 
-    def listBoxCurDrinkSelect(self,event):
+    def DrinksCurSelect(self,event):
         pass
         # selectedIngredients = []
 
