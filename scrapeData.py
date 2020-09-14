@@ -14,6 +14,11 @@ def loggingConfig():
     logging.basicConfig(format=format, level=logging.DEBUG,
                         datefmt="%H:%M:%S")
 
+def cleanhtml(raw_html):
+    cleanr = re.compile('<.*?>')
+    cleantext = re.sub(cleanr, '', raw_html)
+    return cleantext
+
 loggingConfig()
 
 htmlFile = "cubaDrinks.html"
@@ -53,6 +58,7 @@ if not os.path.exists("./" + imgDir):
 for tag in soup.body.find_all(class_=re.compile("cocktail-item")):
     # print(str(tag) + "\n")
     drinkImgUrl = tag["data-largeimg"]
+    drinkInstructions = cleanhtml(tag["data-info"])
     drinkName = tag.find("h3", attrs={"itemprop": True}).string
     recipe = tag.find(class_=re.compile("ingredients-wrap"))
     # print(recipe)
@@ -85,9 +91,9 @@ for tag in soup.body.find_all(class_=re.compile("cocktail-item")):
         except IndexError:
             pass
 
-
         # Put it all into the dict!
         recipeDict[str(drinkName)]["ingredients"][ingredientName] = amount
+        recipeDict[str(drinkName)]["instructions"] = drinkInstructions
 
 with open("drinkRecipes.json","w", encoding='utf8') as json_file:
     json.dump(recipeDict, json_file, indent=4, sort_keys=True, ensure_ascii=False)
