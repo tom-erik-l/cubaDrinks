@@ -12,7 +12,8 @@ class DrinksApp:
         self.Ingredients(parent)
         self.Drinks(parent)
         self.Drinks1Missing(parent)
-        self.DisplayDrink()
+        self.displayDrink = self.DisplayDrink(parent)
+
 
     class ScrollableListBox:
         def __init__(self,**kwargs):
@@ -50,7 +51,7 @@ class DrinksApp:
 
     def Ingredients(self, parent):
         kwargs = {"tkParent": parent,
-                  "labelText": "Possible drinks\nSelect one",
+                  "labelText": "Ingredients\nSelect multiple",
                   "selectmode": MULTIPLE,
                   "selectFunction": self.IngredientsCurSelect}
         self.ingredients =self.ScrollableListBox(**kwargs)
@@ -88,37 +89,48 @@ class DrinksApp:
             Label(displayContainer, text="Your selected drink:").pack(side=TOP)
 
             # Frame for listbox and scrollbar
-            displayFrame = Frame(displayContainer)
-            displayFrame.pack()
+            self.displayFrame = Frame(displayContainer)
+            self.displayFrame.pack()
 
-        def OpenPicture(imgPath):
+            # Put a picture in here
+            self.OpenPicture()
+
+        def OpenPicture(self, **kwargs):
             #Drink picture:
             maxWidth = 500
             maxHeight = 500
             try:
+                imgPath = kwargs["drinkPicture"]
                 img = Image.open(imgPath)
             except Exception:
                 img = Image.open("images/dummy.png")
+            finally: #Show the picture
+                #Maintain the scaling
+                # origScale = img.size[1]/img.size[2] # width / height -> width should be origScale * height
+                widthSizeFactor = img.size[0] / maxWidth
+                width = math.floor(img.size[0]/widthSizeFactor)
+                height = math.floor(img.size[1]/widthSizeFactor)
 
+                if height > maxHeight:
+                    heightSizeFactor = img.size[1] / maxHeight
+                    width = math.floor(widthSizeFactor*img.size[0])
+                    height = math.floor(widthSizeFactor*img.size[1])
 
-        finally: #Show the picture
-            #Maintain the scaling
-            # origScale = img.size[1]/img.size[2] # width / height -> width should be origScale * height
-            widthSizeFactor = img.size[0] / maxWidth
-            width = math.floor(img.size[0]/widthSizeFactor)
-            height = math.floor(img.size[1]/widthSizeFactor)
+                img = img.resize((width,height), Image.ANTIALIAS)
+                img = ImageTk.PhotoImage(img)
 
-            if height > maxHeight:
-                heightSizeFactor = img.size[1] / maxHeight
-                width = math.floor(widthSizeFactor*img.size[0])
-                height = math.floor(widthSizeFactor*img.size[1])
+                if "configure" in kwargs:
+                    print("Configure!")
+                    self.drinkImage.configure(image=img)
+                else:
+                    self.drinkImage = Label(self.displayFrame, image=img)
+                    self.drinkImage.pack(side=TOP)
 
-            img = img.resize((width,height), Image.ANTIALIAS)
-            img =  ImageTk.PhotoImage(img)
+                self.drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
 
-            self.drinkImage = Label(displayFrame, image=img)
-            self.drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
-            self.drinkImage.pack(side=TOP)
+            def WriteRecipe(self, **kwargs):
+                pass
+
 
     def IngredientsCurSelect(self,event):
         selectedIngredients = []
@@ -163,18 +175,15 @@ class DrinksApp:
             self.drinks1Missing.listBox.insert(END, item)
 
     def DrinksCurSelect(self,event):
-        pass
+        widget = event.widget
+        drinkSelection = widget.get(widget.curselection())
+        drink = self.recipeList[drinkSelection]
+        # print(drink)
 
-        self.drinkImage.configure()
-        # selectedIngredients = []
+        # Update the picture
+        kwargs = {"drinkPicture":  drink["image"], "configure": True}
+        self.displayDrink.OpenPicture(**kwargs)
 
-        # widget = event.widget
-        # selection = widget.curselection()
-        # for i in selection:
-        #     selectedIngredients.append(widget.get(i))
-
-        # selectedIngredients = set(selectedIngredients)
-        # # print(selectedIngredients)
 
 
 
