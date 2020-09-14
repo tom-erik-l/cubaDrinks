@@ -94,6 +94,7 @@ class DrinksApp:
 
             # Put a picture in here
             self.OpenPicture()
+            self.WriteRecipe()
 
         def OpenPicture(self, **kwargs):
             #Drink picture:
@@ -108,29 +109,31 @@ class DrinksApp:
                 #Maintain the scaling
                 # origScale = img.size[1]/img.size[2] # width / height -> width should be origScale * height
                 widthSizeFactor = img.size[0] / maxWidth
-                width = math.floor(img.size[0]/widthSizeFactor)
-                height = math.floor(img.size[1]/widthSizeFactor)
+                self.width = math.floor(img.size[0]/widthSizeFactor)
+                self.height = math.floor(img.size[1]/widthSizeFactor)
 
-                if height > maxHeight:
+                if self.height > maxHeight:
                     heightSizeFactor = img.size[1] / maxHeight
-                    width = math.floor(widthSizeFactor*img.size[0])
-                    height = math.floor(widthSizeFactor*img.size[1])
+                    self.width = math.floor(img.size[0]/heightSizeFactor)
+                    self.height = math.floor(img.size[1]/heightSizeFactor)
 
-                img = img.resize((width,height), Image.ANTIALIAS)
+                img = img.resize((self.width,self.height), Image.ANTIALIAS)
                 img = ImageTk.PhotoImage(img)
 
                 if "configure" in kwargs:
-                    print("Configure!")
                     self.drinkImage.configure(image=img)
                 else:
                     self.drinkImage = Label(self.displayFrame, image=img)
-                    self.drinkImage.pack(side=TOP)
+                    self.drinkImage.pack(side="top")
 
                 self.drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
 
-            def WriteRecipe(self, **kwargs):
-                pass
-
+        def WriteRecipe(self, **kwargs):
+            if "configure" in kwargs:
+                self.drinkName.configure(text=kwargs["drinkName"])
+            else:
+                self.drinkName = Label(self.displayFrame, text="Dummy drink name", wraplength=math.floor(self.width), pady=5, font='Helvetica 12 bold')
+                self.drinkName.pack(side="top")
 
     def IngredientsCurSelect(self,event):
         selectedIngredients = []
@@ -183,6 +186,10 @@ class DrinksApp:
         # Update the picture
         kwargs = {"drinkPicture":  drink["image"], "configure": True}
         self.displayDrink.OpenPicture(**kwargs)
+
+        # Update the name
+        kwargs = {"drinkName": drinkSelection, "configure": True}
+        self.displayDrink.WriteRecipe(**kwargs)
 
 
 
