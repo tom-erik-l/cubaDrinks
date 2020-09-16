@@ -8,7 +8,7 @@ import logging
 
 def loggingConfig():
     format = "%(asctime)s: %(message)s"
-    logging.basicConfig(format=format, level=logging.DEBUG,
+    logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")
 
 
@@ -19,7 +19,7 @@ class DrinksApp:
         self.Drinks(parent)
         self.Drinks1Missing(parent)
         self.displayDrink = self.DisplayDrink(parent)
-
+        self.RememberState()
 
     class ScrollableListBox:
         def __init__(self,**kwargs):
@@ -60,7 +60,7 @@ class DrinksApp:
                   "labelText": "Ingredients\nSelect multiple",
                   "selectmode": MULTIPLE,
                   "selectFunction": self.IngredientsCurSelect}
-        self.ingredients =self.ScrollableListBox(**kwargs)
+        self.ingredients = self.ScrollableListBox(**kwargs)
 
         # Import the data
         recipeLists = recipes()
@@ -72,18 +72,21 @@ class DrinksApp:
             # print(item)
             self.ingredients.listBox.insert(END, item)
 
+    def RememberState(self):
         ### How to remember state????
         try:
             with open("selectedIngredients.txt", "r", encoding="utf8") as file:
+                selectedIngredients = []
                 for line in file:
                     idx = self.ingredientList.index(line.rstrip())
-                    print(idx)
+                    selectedIngredients.append(line.rstrip())
                     self.ingredients.listBox.selection_set(idx)
+                self.PossibleDrinksUpdate(selectedIngredients)
+                self.PossibleDrinks1MissingUpdate(selectedIngredients)
         except:
             # pass
             logging.debug("Couldn't find selectedIngredients.txt")
             traceback.print_exc()
-
 
     def Drinks(self, parent):
         kwargs = {"tkParent": parent,
