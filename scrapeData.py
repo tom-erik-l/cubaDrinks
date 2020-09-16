@@ -8,6 +8,7 @@ import re #regular expressions
 import json
 import os.path
 import traceback
+import html
 
 def loggingConfig():
     format = "%(asctime)s: %(message)s"
@@ -27,7 +28,7 @@ try:
     if not os.path.exists(htmlFile):
         raise Exception
 
-    with open(htmlFile, "r", encoding='utf-8') as file:
+    with open(htmlFile, "r", encoding='utf8') as file:
         soup = BeautifulSoup(file, "html.parser", from_encoding='utf8')
 
     logging.debug(htmlFile + " closed again")
@@ -44,7 +45,7 @@ except Exception:
     # print(response)
     soup = BeautifulSoup(response.text, "html.parser", from_encoding='utf8')
 
-    with open(htmlFile, "w", encoding='utf-8') as file:
+    with open(htmlFile, "w", encoding='utf8') as file:
         file.write(str(soup))
 
 # Prepare an empty dictionary for all the recipies
@@ -93,7 +94,7 @@ for tag in soup.body.find_all(class_=re.compile("cocktail-item")):
 
         # Put it all into the dict!
         recipeDict[str(drinkName)]["ingredients"][ingredientName] = amount
-        recipeDict[str(drinkName)]["instructions"] = drinkInstructions
+        recipeDict[str(drinkName)]["instructions"] = html.unescape(drinkInstructions) # Needed to use html.unescape to convert html entities to unicode characters (apparently BS4 wasn't doing it, even though it was supposed to)
 
 with open("drinkRecipes.json","w", encoding='utf8') as json_file:
     json.dump(recipeDict, json_file, indent=4, sort_keys=True, ensure_ascii=False)
