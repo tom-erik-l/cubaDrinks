@@ -99,7 +99,7 @@ class DrinksApp:
         def OpenPicture(self, **kwargs):
             #Drink picture:
             maxWidth = 500
-            maxHeight = 500
+            maxHeight = 300
             try:
                 imgPath = kwargs["drinkPicture"]
                 img = Image.open(imgPath)
@@ -129,11 +129,41 @@ class DrinksApp:
                 self.drinkImage.image = img  # keep a reference! (So it doesn't get killed by the garbage collection)
 
         def WriteRecipe(self, **kwargs):
+            widthScaling = 1.5
+
             if "configure" in kwargs:
                 self.drinkName.configure(text=kwargs["drinkName"])
+                self.drinkInstructions.configure(text=kwargs["instructions"])
+
+                try:
+                    self.drinkIngredients.destroy()
+                except Exception:
+                    pass
+                finally:
+                    bullet = "• "
+                    ingredientText = ""
+                    first = True
+                    for i, (k, v) in enumerate(kwargs["ingredients"].items()):
+                        if i == len(kwargs["ingredients"])-1: # Last bullet poitn
+                            ingredientText = ingredientText + bullet + k + " " + v
+                        elif first: # First bullet point
+                            first = False
+                            ingredientText = bullet + k + " " + v + "\n"
+                        else: # Append to the string
+                            ingredientText = ingredientText + bullet + k + " " + v + "\n"
+
+
+                    self.drinkIngredients = Label(self.displayFrame, text=ingredientText, justify=LEFT, wraplength=math.floor(self.width/widthScaling), pady=2, font='Helvetica 10')
+                    self.drinkIngredients.pack(side="top")
+
             else:
-                self.drinkName = Label(self.displayFrame, text="Dummy drink name", wraplength=math.floor(self.width), pady=5, font='Helvetica 12 bold')
+                self.drinkName = Label(self.displayFrame, text="Dummy drink name", wraplength=math.floor(self.width/widthScaling), pady=5, font='Helvetica 12 bold')
                 self.drinkName.pack(side="top")
+
+                self.drinkInstructions = Label(self.displayFrame, text="dummy instructions", justify=LEFT, wraplength=math.floor(self.width/widthScaling), pady=2, font='Helvetica 10')
+                self.drinkInstructions.pack(side="top")
+
+
 
     def IngredientsCurSelect(self,event):
         selectedIngredients = []
@@ -188,11 +218,8 @@ class DrinksApp:
         self.displayDrink.OpenPicture(**kwargs)
 
         # Update the name
-        kwargs = {"drinkName": drinkSelection, "configure": True}
+        kwargs = {"drinkName": drinkSelection, "instructions": drink["instructions"], "ingredients": drink["ingredients"], "configure": True}
         self.displayDrink.WriteRecipe(**kwargs)
-
-
-
 
 
 class recipes():
