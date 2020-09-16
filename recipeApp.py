@@ -4,6 +4,12 @@ from tkinter import *
 from PIL import Image # pillow module
 from PIL import ImageTk # pillow module
 import math
+import logging
+
+def loggingConfig():
+    format = "%(asctime)s: %(message)s"
+    logging.basicConfig(format=format, level=logging.DEBUG,
+                        datefmt="%H:%M:%S")
 
 
 class DrinksApp:
@@ -65,6 +71,19 @@ class DrinksApp:
         for item in self.ingredientList:
             # print(item)
             self.ingredients.listBox.insert(END, item)
+
+        ### How to remember state????
+        try:
+            with open("selectedIngredients.txt", "r", encoding="utf8") as file:
+                for line in file:
+                    idx = self.ingredientList.index(line.rstrip())
+                    print(idx)
+                    self.ingredients.listBox.selection_set(idx)
+        except:
+            # pass
+            logging.debug("Couldn't find selectedIngredients.txt")
+            traceback.print_exc()
+
 
     def Drinks(self, parent):
         kwargs = {"tkParent": parent,
@@ -163,8 +182,6 @@ class DrinksApp:
                 self.drinkInstructions = Label(self.displayFrame, text="dummy instructions", justify=LEFT, wraplength=math.floor(self.width/widthScaling), pady=2, font='Helvetica 10')
                 self.drinkInstructions.pack(side="top")
 
-
-
     def IngredientsCurSelect(self,event):
         selectedIngredients = []
 
@@ -178,6 +195,10 @@ class DrinksApp:
         # call the PossibleDrinks function to update the possibleDrinks listbox
         self.PossibleDrinksUpdate(selectedIngredients)
         self.PossibleDrinks1MissingUpdate(selectedIngredients)
+
+        with open("selectedIngredients.txt", "w", encoding="utf8") as file:
+            for item in sorted(list(selectedIngredients)):
+                file.write(item + "\n")
 
     def PossibleDrinksUpdate(self,selectedIngredients):
         possibleDrinks = []
@@ -246,7 +267,7 @@ class recipes():
         listIngredient = sorted(list(set(listIngredient)))
         return listIngredient
 
-
+loggingConfig()
 root = Tk()
 drinksApp = DrinksApp(root)
 root.mainloop()
